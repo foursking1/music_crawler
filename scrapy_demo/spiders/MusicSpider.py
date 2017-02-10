@@ -7,7 +7,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from bs4 import BeautifulSoup
-from items import MusicInfo
+from scrapy_demo.items import MusicInfo
 import sys
 
 reload(sys)

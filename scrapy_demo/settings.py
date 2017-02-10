@@ -21,25 +21,25 @@ USER_AGENT = 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, lik
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = False
 
-#WEBDRIVER_BROWSER = 'PhantomJS'
+WEBDRIVER_BROWSER = 'PhantomJS'
 #WEBDRIVER_BROWSER = 'Firefox'
-WEBDRIVER_BROWSER = 'Chrome'
+#WEBDRIVER_BROWSER = 'Chrome'
 #WEBDRIVER_BROWSER = 'Ie'
 
-# WEBDRIVER_OPTIONS = {
-#     #'service_args': [ '--debug=true', '--load-images=false', '--webdriver-loglevel=debug'],
-#     'executable_path':'D:/Program Files/phantomjs-2.1.1-windows/bin/phantomjs.exe'
-#     #'executable_path': ['D:/Program Files/phantomjs-1.9.1-windows/phantomjs.exe']
-# }
+WEBDRIVER_OPTIONS = {
+    #'service_args': [ '--debug=true', '--load-images=false', '--webdriver-loglevel=debug'],
+    'executable_path':'/home/foursking/project/phantomjs-2.1.1-linux-x86_64/bin/phantomjs'
+    #'executable_path': ['D:/Program Files/phantomjs-1.9.1-windows/phantomjs.exe']
+}
 
 
 # WEBDRIVER_OPTIONS = {
 #     'executable_path':['D:\Program Files (x86)\Mozilla Firefox\firefox.exe']
 # }
 
-WEBDRIVER_OPTIONS = {
-    'executable_path':["D:/downloads/chromedriver_win32/chromedriver"]
-}
+#WEBDRIVER_OPTIONS = {
+#    'executable_path':["D:/downloads/chromedriver_win32/chromedriver"]
+#}
 
 # WEBDRIVER_OPTIONS = {
 #     'executable_path':["C:\Program Files\Internet Explorer\iexplore.exe"]
