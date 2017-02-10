@@ -39,7 +39,8 @@ class MusicLyc(scrapy.Spider):
             songs = ""
             for line in bs_obj.select("p.lrcItem"):
                 songs += line.text + '\n'
-            print songs
+            title = bs_obj.select_one("p.lrcName").text
+            print title
 
 
         except Exception, e:
