@@ -20,7 +20,6 @@ class MusicLyc(scrapy.Spider):
             for song in f.readlines():
                 url = "http://sou.kuwo.cn/ws/NSearch?type=all&key=" + song
                 yield Request(url, callback=self.parse_page)
-                break
 
     def parse_page(self, response):
         try:
@@ -39,8 +38,12 @@ class MusicLyc(scrapy.Spider):
             songs = ""
             for line in bs_obj.select("p.lrcItem"):
                 songs += line.text + '\n'
-            title = bs_obj.select_one("p.lrcName").text
-            print title
+            title = bs_obj.select_one("p#lrcName").text
+            author = bs_obj.select_one("p.artist span").text
+            fname = "./songs/" + title + '-' + author + '.txt'
+            with open(fname, 'w') as f:
+                f.write(songs)
+            #print songs
 
 
         except Exception, e:
