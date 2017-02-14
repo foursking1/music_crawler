@@ -9,11 +9,13 @@ class PlaylistInfo(Item):
     Name = Field()
     Time = Field()
     Tag = Field()
+    Introduction = Field()
     Author = Field()
-    Playtimes = Field()
-    Sharetimes = Field()
-    Collecttimes = Field()
-    Commnets = Field()
+    Playnum = Field()
+    Sharenum = Field()
+    Collectnum = Field()
+    Commentnum = Field()
+
 
 class MusicInfo(Item):
     """音乐信息"""
@@ -22,3 +24,4 @@ class MusicInfo(Item):
     title = Field()
     singer = Field()
     album = Field()
+    pid = Field()
